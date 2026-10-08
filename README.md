@@ -2,6 +2,8 @@
 
 Static landing page for grow-shop. `index.html` is served verbatim.
 
+Owned by Biglobster LLC (GitHub organization `BiglobsterLLC`); deployed on Zeabur from `main`.
+
 ## Git hooks
 
 A committed `.githooks/pre-commit` guards against shipping broken pages: it
