@@ -345,6 +345,13 @@
     document.getElementById('btn-es').classList.toggle('active', lang === 'es');
   }
 
+  // Open in Spanish when linked with ?lang=es (e.g. from experiencianatural.com/grow-shop/)
+  (function () {
+    let l = null;
+    try { l = new URLSearchParams(location.search).get('lang'); } catch (e) { /* ignore */ }
+    if (l === 'es') setLang('es');
+  })();
+
   // --- Validación en tiempo real y envío ---
   function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
